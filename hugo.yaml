@@ -1,0 +1,36 @@
+baseURL: "https://hugo-dead-simple.netlify.com/"
+languageCode: en-us
+title: "Hugo Protected Site"
+enableGitInfo: true
+menu:
+  main:
+    - name: "<u>H</u>ome"
+      url: /
+      weight: 1
+
+
+params:
+  description: "Hugo dead simple example"
+  noSearch: true
+
+markup:
+  highlight:
+    codeFences: true
+    style: bw
+    lineNumbersInTable: false
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - html
+    - rss
+    - json
+  page:
+    - html
+
+module:
+  imports:
+    - path: github.com/barklan/hugo-dead-simple

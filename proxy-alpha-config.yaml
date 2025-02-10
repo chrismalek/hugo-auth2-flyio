@@ -1,0 +1,41 @@
+# Configuration File for oauth2-proxy
+# https://oauth2-proxy.github.io/oauth2-proxy/configuration/alpha-config#upstream
+
+
+# https://oauth2-proxy.github.io/oauth2-proxy/configuration/alpha-config/#server
+
+
+Server:
+  BindAddress: 0.0.0.0:8080
+
+
+upstreamConfig:
+  proxyRawPath: true
+  upstreams:
+    - id: hugoSite
+      path: /
+      # Note the 3 slashes after file:
+      uri: file:///staticSite
+
+
+
+providers:
+  - id: github
+    name: GitHub
+    provider: github
+    # Defined in Fly.toml
+    clientID: ${GITHUB_CLIENT_ID}
+    # Defined in Fly.toml or Fly Secret
+    clientSecret: ${GITHUB_CLIENT_SECRET}
+    #  Not including scope and will take the default which is user:email read:org
+    # scope: user:email
+    githubConfig:
+      # If you want to restrict logins to a set of GitHub teams, uncomment the following line
+      # teams:
+      #   - "org-name/team-name"
+      #   - "org-name/another-team-name"
+      # If you want to restrict logins to a set of GitHub organizations, uncomment the following line
+      org: cedarhillsgroup
+      
+
+

@@ -1,0 +1,12 @@
+direction: right
+
+github.label: GitHub Auth
+
+fly.label: Fly.io
+
+fly.proxy: OAuth2 Proxy
+fly.files: Hugo Site \n(Static Files)
+user -> fly.proxy: View Site\n (HTTP)
+fly.proxy <-> fly.files: Serve Content \n (Static Files)\n Restricted to\n Authenticated & Authorized Users
+user -> github: OAuth Flow
+fly.proxy -> github: OAuth Flow

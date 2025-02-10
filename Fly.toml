@@ -1,0 +1,36 @@
+# fly.toml app configuration file generated for hugo-oauth2-flyio on 2025-01-30T09:02:43-08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'hugo-oauth2-flyio'
+primary_region = 'lax'
+
+[build]
+
+[env]
+  # these need to be set as secrets - see readme
+  # GITHUB_CLIENT_ID = '123'
+  # GITHUB_CLIENT_SECRET = 'xyz'
+ 
+  # must be generated with `dd if=/dev/urandom bs=32 count=1 2>/dev/null | base64 | tr -d -- '\n' | tr -- '+/' '-_'; echo`
+  # OAUTH2_PROXY_COOKIE_SECRET  is set as a secret - see readme
+  # OAUTH2_PROXY_COOKIE_SECRET 
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[services]]
+  protocol = ''
+  internal_port = 0
+  ports = []
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
