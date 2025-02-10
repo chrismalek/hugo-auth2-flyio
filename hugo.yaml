@@ -1,4 +1,4 @@
-baseURL: "https://hugo-dead-simple.netlify.com/"
+baseURL: "https://hugo-oauth2-flyio.fly.dev"
 languageCode: en-us
 title: "Hugo Protected Site"
 enableGitInfo: true
@@ -10,7 +10,7 @@ menu:
 
 
 params:
-  description: "Hugo dead simple example"
+  description: "Hugo Protected Site"
   noSearch: true
 
 markup:
