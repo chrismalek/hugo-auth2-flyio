@@ -78,3 +78,11 @@ In my case, the configuration is set up to only allow members of my GitHub organ
 Once they are authenticated they can see the site. This screenshot is the static hugo site which just has links to the oAuth2 proxy routes.
 
 ![static site](/docs/static-site.png)
+
+
+## References and Similar
+
+- [oAuth2 Proxy Documentation](https://oauth2-proxy.github.io/oauth2-proxy/)
+- Similar Example but on Render.com [https://render.com/blog/password-protect-with-oauth2-proxy](https://render.com/blog/password-protect-with-oauth2-proxy)
+- Another example [https://github.com/hamelsmu/oauth-tutorial/tree/main/simple](https://github.com/hamelsmu/oauth-tutorial/tree/main/simple)
+  - [YouTube Walkthrough](https://www.youtube.com/watch?v=EjEzZ4Hg-B4)
