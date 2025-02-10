@@ -1,5 +1,5 @@
 
-# Draft Blog Post: Protecting Your Hugo Site with OAuth2 and Deploying to Fly.io
+# Protecting Your Hugo Site with OAuth2 and Deploying to Fly.io
 
 ## Introduction
 
